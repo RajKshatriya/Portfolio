@@ -11,17 +11,23 @@ function FloatingCube() {
         meshRef.current.rotation.y = state.clock.elapsedTime * 0.2
     })
     return (
-        <Float floatIntensity={1.5} rotationIntensity={0.5}>
+       <Float floatIntensity={1.5} speed={2} rotationIntensity={0.4}>
             <mesh ref={meshRef}>
-                <torusKnotGeometry args={[1, 0.35, 128, 16]} />
-                <MeshDistortMaterial
+                <torusGeometry args={[1.5, 0.08, 16, 100]} />
+                <meshStandardMaterial color="#6c63ff" emissive="#6c63ff" emissiveIntensity={0.6} />
+            </mesh>
+            <mesh ref={meshRef}>
+                <torusGeometry args={[2.1, 0.05, 16, 100]} />
+                <meshStandardMaterial color="#00d4ff" emissive="#00d4ff" emissiveIntensity={0.5} />
+            </mesh>
+            <mesh>
+                <sphereGeometry args={[0.8, 32, 32]} />
+                <meshStandardMaterial
                     color="#6c63ff"
-                    distort={0.25}
-                    speed={2}
                     roughness={0.1}
                     metalness={0.9}
-                    emissive="#3330aa"
-                    emissiveIntensity={0.4}
+                    emissive="#3a20dd"
+                    emissiveIntensity={0.5}
                 />
             </mesh>
         </Float>
