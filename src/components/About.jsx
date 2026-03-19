@@ -37,7 +37,7 @@ const timelineItems = [
     {
         year: '2025',
         title: 'B.Sc. in AI&ML @ Sheth N.K.T.T. College',
-        desc: 'Sem 1 SGPI: 7.27. Pursuing degree in Artificial Intelligence and Machine Learning (2025 - 2028).',
+        desc: 'Pursuing degree in Artificial Intelligence and Machine Learning (2025 - 2028).',
         color: '#6c63ff',
     },
     {
