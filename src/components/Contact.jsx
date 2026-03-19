@@ -4,6 +4,9 @@ import { Float } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import './Contact.css'
 
+
+const WEB3FORMS_ACCESS_KEY = 'cfab0108-7712-4561-8be8-cefabb38d63c'
+
 function ContactOrb() {
     const meshRef = useRef()
     useFrame((state) => {
@@ -50,15 +53,36 @@ export default function Contact() {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         setLoading(true)
-        setTimeout(() => {
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify({
+                    access_key: WEB3FORMS_ACCESS_KEY,
+                    name: form.name,
+                    email: form.email,
+                    subject: `Portfolio Contact: ${form.subject}`,
+                    message: form.message,
+                }),
+            })
+            const data = await res.json()
+            if (data.success) {
+                setStatus('success')
+                setForm({ name: '', email: '', subject: '', message: '' })
+            } else {
+                throw new Error(data.message || 'Submission failed')
+            }
+        } catch (err) {
+            console.error('Web3Forms error:', err)
+            setStatus('error')
+        } finally {
             setLoading(false)
-            setStatus('success')
-            setForm({ name: '', email: '', subject: '', message: '' })
-            setTimeout(() => setStatus(null), 4000)
-        }, 1500)
+            setTimeout(() => setStatus(null), 5000)
+        }
     }
 
     return (
@@ -199,6 +223,17 @@ export default function Contact() {
                                     animate={{ opacity: 1, y: 0 }}
                                 >
                                     ✅ Message sent! I'll get back to you soon.
+                                </motion.div>
+                            )}
+
+                            {status === 'error' && (
+                                <motion.div
+                                    className="form-success"
+                                    style={{ background: 'rgba(255,60,60,0.15)', borderColor: '#ff3c3c', color: '#ff6b6b' }}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                >
+                                    ❌ Oops! Something went wrong. Please try emailing me directly.
                                 </motion.div>
                             )}
                         </form>
