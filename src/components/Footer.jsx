@@ -74,7 +74,7 @@ export default function Footer() {
                         <div className="footer-info-list">
                             <div className="footer-info">
                                 <span className="info-label">Location</span>
-                                <span className="info-value">Thane East, MH, India</span>
+                                <span className="info-value">Mumbai, India</span>
                             </div>
                             <div className="footer-info">
                                 <span className="info-label">Timezone</span>

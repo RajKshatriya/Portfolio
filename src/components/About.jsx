@@ -79,7 +79,7 @@ export default function About() {
                         About <span className="gradient-text">Me</span>
                     </motion.h2>
                     <motion.p variants={fadeIn} className="about-bio">
-                        Hey there! I'm <strong>Raj Kshatriya</strong>, a continuous learner and passionate frontend developer based in Thane East, Maharashtra.
+                        Hey there! I'm <strong>Raj Kshatriya</strong>, a continuous learner and passionate frontend developer based in Mumbai, India.
                         I thrive on building interactive web applications using <span className="gradient-text">React.js and Three.js</span>, bringing digital architectures to life.
                     </motion.p>
                     <motion.p variants={fadeIn} className="about-bio">
