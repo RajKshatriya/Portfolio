@@ -217,9 +217,76 @@ body {
   opacity: 0.4;
 }
 
-/* Responsive */
+/* Responsive Enhancements */
 @media (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  .cursor, .cursor-trail {
+    display: none !important;
+  }
+
+  canvas, .hero-canvas canvas, .about-canvas-wrap canvas, .skills-canvas-wrap canvas, .project-canvas-mini canvas, .contact-canvas-wrap canvas {
+    pointer-events: none !important;
+  }
+
   .section {
-    padding: 4rem 1rem;
+    padding: 3rem 1.2rem !important;
+  }
+  
+  .hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 7rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .hero-name {
+    font-size: clamp(2.2rem, 10vw, 4rem) !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+  }
+
+  .glass-card {
+    padding: 1.5rem !important;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .btn-primary, .btn-outline {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-item {
+    flex: 1 1 40%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .timeline-item {
+     padding: 1rem 1rem;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
   }
 }
