@@ -8,14 +8,12 @@ const skills = [
     { name: 'JavaScript', level: 85, color: '#f7df1e', icon: '📜', category: 'Frontend' },
     { name: 'React.js', level: 75, color: '#61dafb', icon: '⚛️', category: 'Frontend' },
     { name: 'Three.js', level: 60, color: '#6c63ff', icon: '🌐', category: 'Frontend' },
-    { name: 'HTML5/CSS3', level: 85, color: '#e34c26', icon: '🎨', category: 'Frontend' },
-    { name: 'SQL', level: 65, color: '#336791', icon: '🐘', category: 'Backend' },
-    { name: 'Python', level: 70, color: '#3776ab', icon: '🐍', category: 'Backend' },
+    { name: 'HTML5 & CSS3', level: 80, color: '#e34c26', icon: '🎨', category: 'Frontend' },
     { name: 'C / C++', level: 75, color: '#00599C', icon: '⚙️', category: 'Backend' },
-    { name: 'Vercel', level: 80, color: '#ffffff', icon: '▲', category: 'Tools' },
-    { name: 'Onrender', level: 75, color: '#46E3B7', icon: '☁️', category: 'Tools' },
-    { name: 'Leadership', level: 90, color: '#f24e1e', icon: '👥', category: 'Soft Skills' },
-    { name: 'Team Mgmt', level: 85, color: '#00d4ff', icon: '🤝', category: 'Soft Skills' },
+    { name: 'Python', level: 70, color: '#3776ab', icon: '🐍', category: 'Backend' },
+    { name: 'MySQL', level: 65, color: '#4479A1', icon: '🐬', category: 'Backend' },
+    { name: 'Git & GitHub', level: 80, color: '#f34f29', icon: '🐙', category: 'Tools' },
+    { name: 'Deployment (Vercel/Render)', level: 75, color: '#ffffff', icon: '☁️', category: 'Tools' },
 ]
 
 function SkillSphere({ position, color, scale = 1 }) {
