@@ -177,7 +177,7 @@ export default function Contact() {
                                         name="email"
                                         value={form.email}
                                         onChange={handleChange}
-                                        placeholder="john@example.com"
+                                        placeholder="john@gmail.com"
                                         required
                                         className="form-input"
                                     />

@@ -51,10 +51,7 @@ export default function Navbar() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <span className="logo-bracket">&lt;</span>
-                    <span className="logo-text">Raj</span>
-                    <span className="logo-accent">.</span>
-                    <span className="logo-bracket">/&gt;</span>
+                    <span className="logo-text">RK.</span>
                 </motion.div>
 
                 <ul className="nav-links">

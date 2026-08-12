@@ -52,18 +52,6 @@ const timelineItems = [
         desc: 'Frontend development for multiple club projects.',
         color: '#00d4ff',
     },
-    {
-        year: '2025',
-        title: 'Maharashtra HSC Boards',
-        desc: 'Completed Higher Secondary with 62.20%.',
-        color: '#ff6584',
-    },
-    {
-        year: '2023',
-        title: 'Maharashtra SSC Boards',
-        desc: 'Completed Secondary School with 76.60%.',
-        color: '#43e97b',
-    },
 ]
 
 export default function About() {
@@ -105,7 +93,7 @@ export default function About() {
                     </motion.div>
 
                     <motion.div variants={fadeIn} className="about-chips">
-                        {['JavaScript', 'React.js', 'Three.js', 'SQL', 'Fast Learner', 'Leadership'].map(chip => (
+                        {['JavaScript', 'React.js', 'Three.js', 'Gsap', 'Fast Learner', 'Leadership'].map(chip => (
                             <span key={chip} className="chip hoverable">{chip}</span>
                         ))}
                     </motion.div>

@@ -4,8 +4,6 @@ import { Float, Stars, Sphere, MeshDistortMaterial, Environment, Text3D, Center 
 import * as THREE from 'three'
 import { motion } from 'framer-motion'
 import './Hero.css'
-
-// Floating glowing orb
 function GlowOrb({ position, color, size = 1, speed = 1 }) {
     const meshRef = useRef()
     useFrame((state) => {
@@ -30,7 +28,6 @@ function GlowOrb({ position, color, size = 1, speed = 1 }) {
     )
 }
 
-// Rotating geometric shape
 function RotatingIcosahedron() {
     const meshRef = useRef()
     useFrame((state) => {
@@ -52,7 +49,6 @@ function RotatingIcosahedron() {
     )
 }
 
-// Wireframe ring
 function Ring({ radius, color, rotationSpeed }) {
     const ref = useRef()
     useFrame((state) => {
@@ -67,7 +63,6 @@ function Ring({ radius, color, rotationSpeed }) {
     )
 }
 
-// Particle cloud
 function Particles({ count = 200 }) {
     const points = useRef()
     const positions = useMemo(() => {
@@ -153,22 +148,22 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.p className="hero-greeting" custom={1} initial="hidden" animate="visible" variants={heroText}>
-                    Hello, I'm
+                    Hello, I'm 
                 </motion.p>
 
                 <motion.h1 className="hero-name" custom={2} initial="hidden" animate="visible" variants={heroText}>
-                    Raj <span className="gradient-text">Kshatriya</span>
+                    Full Stack<br></br> <span className="gradient-text">Developer</span>
                 </motion.h1>
 
                 <motion.div className="hero-role" custom={3} initial="hidden" animate="visible" variants={heroText}>
                     <span className="role-bracket">&lt;</span>
-                    <span className="role-text" id="typed-text">Frontend Developer</span>
+                    <span className="role-text" id="typed-text">Raj Kshatriya</span>
                     <span className="role-cursor">_</span>
                     <span className="role-bracket">/&gt;</span>
                 </motion.div>
 
                 <motion.p className="hero-description" custom={4} initial="hidden" animate="visible" variants={heroText}>
-                    Seeking a software development internship to leverage expertise in JavaScript, React.js, Three.js and SQL. Aiming to contribute to real-world projects and accelerate professional growth.
+                    Seeking a software development internship to leverage expertise in JavaScript, React.js, Three.js and Gsap. Aiming to contribute to real-world projects and accelerate professional growth.
                 </motion.p>
 
                 <motion.div className="hero-actions" custom={5} initial="hidden" animate="visible" variants={heroText}>

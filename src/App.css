@@ -1,4 +1,9 @@
-/* App-level styles */
 .app-container {
   position: relative;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
 }

@@ -26,10 +26,7 @@ export default function Footer() {
                 <div className="footer-top">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <span className="logo-bracket">&lt;</span>
-                            <span className="logo-text">Raj</span>
-                            <span className="logo-accent">.</span>
-                            <span className="logo-bracket">/&gt;</span>
+                            <span className="logo-text">RK.</span>
                         </div>
                         <p className="footer-tagline">
                             Building the future, one commit at a time.
